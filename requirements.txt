@@ -1,0 +1,10 @@
+pandas
+numpy
+scikit-learn
+sentence-transformers
+chromadb
+google-genai
+tdqm
+plotly
+google
+python-dotenv
