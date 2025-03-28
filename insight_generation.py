@@ -6,7 +6,7 @@ import re # Added for JSON extraction
 from sklearn.cluster import KMeans
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.decomposition import PCA
-import datetime
+from datetime import datetime
 import plotly.express as px
 # import plotly.graph_objects as go # No longer used directly here
 from sentence_transformers import SentenceTransformer
