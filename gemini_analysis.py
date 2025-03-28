@@ -27,7 +27,7 @@ def analyze_rejection_reasons(client: genai.Client, rejection_pairs: list, batch
         List of analysis results.
     """
     results = []
-    model_name = "gemini-1.5-flash-latest" # Or use gemini-1.5-pro-latest, etc. Consider making this configurable.
+    model_name = "gemini-2.5-pro-exp-03-25" # Or use gemini-1.5-pro-latest, etc. Consider making this configurable.
 
     # Process in batches to manage rate limits
     for i in tqdm(range(0, len(rejection_pairs), batch_size), desc="Analyzing Rejections"):

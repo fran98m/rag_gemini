@@ -185,7 +185,7 @@ def run_rag_system(args):
     
     # Step 3: Gemini API Analysis
     if run_analyze:
-        print("\n=== Paso 3: Análisis con API Gemini 2.0 ===")
+        print("\n=== Paso 3: Análisis con API Gemini ===")
         start_time = time.time()
         
         # Connect to existing ChromaDB
@@ -205,7 +205,7 @@ def run_rag_system(args):
         
         if rejection_data:
             # Analyze rejection reasons with Gemini 2.0
-            print("Analizando razones de rechazo con API Gemini 2.0...")
+            print(f"Analizando razones de rechazo con gemini-2.5-pro-exp-03-25")
             # Pass the initialized gemini_client
             analysis_results = analyze_rejection_reasons(gemini_client, rejection_data, batch_size=5)
             
