@@ -1,9 +1,5 @@
 .env
 .ols/
-<<<<<<< HEAD
 chroma_db/
-=======
-.chromadb/
->>>>>>> origin/main
 __pycache__/
 output/
