@@ -25,24 +25,14 @@ mkdir soporte-cliente-rag
 cd soporte-cliente-rag
 ```
 
-2. **Copiar todos los scripts de Python a tu directorio de proyecto**:
-   - `data_preprocessing.py`
-   - `embeddings_vectordb.py`
-   - `gemini_analysis_updated.py`
-   - `insight_generation_updated.py`
-   - `time_analysis.py`
-   - `main.py`
-
-3. **Crear un entorno virtual e instalar dependencias**:
+2. **Crear un entorno virtual e instalar dependencias**:
 
 ```bash
 python -m venv rag_env
 source rag_env/bin/activate  # En Windows: rag_env\Scripts\activate
 
 # Instalar paquetes necesarios
-pip install pandas numpy scikit-learn sentence-transformers 
-pip install chromadb google-generativeai tqdm plotly
-pip install psycopg2-binary  # Para la opción de PostgreSQL
+pip install -r requirements.txt 
 ```
 
 4. **Configurar tu clave de API de Gemini**:
@@ -57,8 +47,16 @@ set GEMINI_API_KEY=tu_clave_api_aquí
 # En Windows (PowerShell)
 $env:GEMINI_API_KEY="tu_clave_api_aquí"
 ```
+o
 
-Alternativamente, puedes pasar la clave de API como argumento de línea de comandos al ejecutar el sistema.
+puedes configurar un archivo .env en tu directorio con: 
+```bash 
+GEMINI_API_KEY="tu_clave_api_aquí" 
+```
+
+o 
+
+puedes pasar la clave de API como argumento de línea de comandos al ejecutar el sistema.
 
 ## Uso del Sistema
 
@@ -208,11 +206,3 @@ Este sistema RAG puede extenderse de varias maneras:
 4. **Añadir visualizaciones más avanzadas**: Integrar con Dash u otros frameworks de visualización.
 5. **Entrenar modelos personalizados**: Usa los resultados para entrenar modelos personalizados para tu caso de uso específico.
 
-## Próximos Pasos
-
-Después de revisar el análisis:
-
-1. Implementar las recomendaciones en el informe de mejora
-2. Monitorear las tasas de aceptación después de los cambios
-3. Ejecutar el análisis periódicamente para medir el progreso
-4. Considerar usar los insights para reentrenar tu modelo de IA
