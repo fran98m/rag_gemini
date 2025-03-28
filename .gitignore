@@ -1,0 +1,5 @@
+.env
+.ols/
+.chromadb/
+__pycache__/
+output/
